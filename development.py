@@ -26,3 +26,8 @@ plot_cluster_ordered_candles(sp500)
 
 # Create and output the cluster follow-on matrix
 create_follow_cluster_matrix(sp500, k)
+
+
+# get average values of candles in clusters
+sp500_norm['Cluster'] = labels
+sp500_norm.groupby('Cluster').mean()
